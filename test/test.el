@@ -72,6 +72,9 @@
 (ert-deftest send-with-elisp-object ()
   "Send message with elisp object"
   (let ((mrb (mruby-init)))
+    (let ((mrb (mruby-init)))
+      (should (= (mruby-send mrb -10 'abs) 10)))
+
     (let ((got (mruby-send mrb [1 [2 3] [4 [5 6]]] 'flatten)))
       (should (equal got '[1 2 3 4 5 6])))
 
