@@ -71,6 +71,6 @@ fizzbuzz(ARGV[0].to_i)
 
 ;;; You should use vector(not list) for passing sequence type to mruby
 (let ((mrb (mruby-init)))
-  (mruby-send mrb [1 [2 3] [4 [5 6]]] 'flatten"))
+  (mruby-send mrb [1 [2 3] [4 [5 6]]] 'flatten))
 ;; => '[1 2 3 4 5 6]
 ```
