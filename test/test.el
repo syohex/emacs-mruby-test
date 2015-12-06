@@ -78,4 +78,22 @@
     (let ((got (mruby-send mrb "hello WORLD" 'swapcase)))
       (should (equal got "HELLO world")))))
 
+(ert-deftest def-class ()
+  "define class"
+  (let ((mrb (mruby-init)))
+    (let ((got (mruby-eval mrb "
+class Editor
+  def initialize(name, version)
+    @name = name
+    @version = version
+  end
+
+  def to_s
+    \"[\" + @name + \", \" + @version.to_s + \"]\"
+  end
+end
+Editor.new(\"Vim\", 7).to_s
+")))
+      (should (string= got "[Vim, 7]")))))
+
 ;;; test.el ends here
