@@ -33,7 +33,7 @@ Dynamic module feature is implemented only in emacs-25 branch. So you need to bu
 
 ```lisp
 (let ((mrb (mruby-init)))
-  (mruby-eval mrv "ARGV.map {|x| x + 1}" 1 2 3))
+  (mruby-eval mrb "ARGV.map {|x| x + 1}" 1 2 3))
 ;; => [2 3 4]
 
 
