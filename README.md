@@ -61,15 +61,18 @@ fizzbuzz(ARGV[0].to_i)
 ## Call mruby function for elisp objects
 
 ``` lisp
+;; Apply 'Fixnum#abs' for Emacs Lisp integer value
 (let ((mrb (mruby-init)))
   (mruby-send mrb -10 'abs))
 ;; 10
 
+;; Apply 'String#swapcase' for Emacs Lisp string value
 (let ((mrb (mruby-init)))
   (mruby-send mrb "hello WORLD" 'swapcase))
 ;; => "HELLO world"
 
-;;; You should use vector(not list) for passing sequence type to mruby
+;; Apply 'Array#flatten' for Emacs Lisp vector value
+;; [NOTE] You must use vector instead of list for Ruby Array feature
 (let ((mrb (mruby-init)))
   (mruby-send mrb [1 [2 3] [4 [5 6]]] 'flatten))
 ;; => '[1 2 3 4 5 6]
