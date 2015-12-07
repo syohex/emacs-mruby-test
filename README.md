@@ -74,3 +74,9 @@ fizzbuzz(ARGV[0].to_i)
   (mruby-send mrb [1 [2 3] [4 [5 6]]] 'flatten))
 ;; => '[1 2 3 4 5 6]
 ```
+
+
+## License
+
+- This software is released unser the GPLv3.
+- mruby is released under the [MIT License](https://github.com/mruby/mruby/blob/master/MITL).
