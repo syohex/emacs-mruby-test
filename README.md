@@ -24,7 +24,7 @@ Dynamic module feature is implemented only in emacs-25 branch. So you need to bu
 
 ```
 % cd modules
-% git clone https://github.com/syohex/emacs-mruby-test.git
+% git clone --recursive https://github.com/syohex/emacs-mruby-test.git
 % make
 ```
 
