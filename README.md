@@ -81,5 +81,5 @@ fizzbuzz(ARGV[0].to_i)
 
 ## License
 
-- This software is released unser the GPLv3.
+- This software is released under the GPLv3+.
 - mruby is released under the [MIT License](https://github.com/mruby/mruby/blob/master/MITL).
