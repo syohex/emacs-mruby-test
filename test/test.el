@@ -31,7 +31,7 @@
     (should-not (mruby-eval mrb "false"))))
 
 (ert-deftest fixnum ()
-  "float type"
+  "fixnum type"
   (let ((mrb (mruby-init)))
     (should (= (mruby-eval mrb "1") 1))
     (should (= (mruby-eval mrb "1 + 1") 2))
